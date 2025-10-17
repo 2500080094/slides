@@ -1,0 +1,66 @@
+html,body{
+    margin:0;
+    height:100%;
+}
+header{
+    height:50px;
+    background: linear-gradient(90deg,purple,blue);
+    color: white;
+    /* line-height: 50px; */
+}
+footer{
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(90deg, rgb(246, 108, 229),seagreen);
+    color:white;
+    font-size: 8pt;
+    text-align: center;
+}
+section{
+    height: calc(100% - 80px);
+    
+}
+header nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header nav .logo{
+    font-size: 14pt;
+    font-weight: bold;
+    padding-left: 15px;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header nav ul li{
+    margin: 0 15px;
+}
+header nav .menu{
+    display: none;
+}
+/* Resposiveness */
+@media(max-width: 768px){
+    header{
+        line-height: 50px;
+    }
+    header nav ul{
+        display: none;
+        position: absolute;
+        top: 50px;
+        left:0;
+        background-color: linear-gradient(90deg, blue and purple);
+        width: 100%;
+
+    }
+    header nav .menu{
+        display: block;
+        font-size: 16pt;
+        margin-right: 15px;
+    }
+    header nav ul.active{
+        display: block;
+    }
+}
